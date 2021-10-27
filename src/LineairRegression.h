@@ -1,0 +1,4 @@
+class LineairRegression {
+    public:
+        int get_rico(int* xval, int* yval);
+}
