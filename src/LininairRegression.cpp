@@ -3,11 +3,11 @@
 #include <algorithm>
 
 /*
- *  Functie die lineaire regressie zal toepassen op een reeks data.
- *  De functie geeft de rico terug als een float. Count is het aantal elementen in reeks data.
- *  Om deze waarde mee te geven kunnen je volgende constructie gebruiken: sizeof(yval)/sizeof(yval[1]).
+ *  Function that will do linear regression on a serie of data.
+ *  The function returns the slope as float. Count is the amount of points in the serie.
+ *  To give this value to the function you can use the following syntax: count = sizeof(yval)/sizeof(yval[0]).
  */
-float get_rico(int* yval, int count, bool* error = nullptr) {
+float get_slope(int* yval, int count, bool* error = nullptr) {
     
     int max_value = *std::max_element(yval,yval + count);
     if(max_value*max_value > UINT32_MAX/count)

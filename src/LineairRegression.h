@@ -2,5 +2,5 @@
 
 class LineairRegression {
     public:
-        static float get_rico(int* yval, int count);
+        static float get_slope(int* yval, int count);
 };
