@@ -1,10 +1,9 @@
 #pragma once
 
-#include <cstdio>
+#include <cstdint>
+#include <algorithm>
 
 class LineairRegression {
-    private:
-        float mean(int* values, int count);
     public:
-        float get_rico(int* xval, int* yval, int count);
+        float get_rico(int* yval, int count);
 };
