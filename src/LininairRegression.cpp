@@ -1,5 +1,6 @@
 #include "LineairRegression.h"
-
+#include <cstdint>
+#include <algorithm>
 
 /*
  *  Functie die lineaire regressie zal toepassen op een reeks data.
@@ -30,7 +31,7 @@ float get_rico(int* yval, int count, bool* error = nullptr) {
         
         int32_t nominator = ((count*xysum) - (xsum * ysum));
         int32_t denominator = ((count*powxsum)-(xsum*xsum));
-        
+
         if(error != nullptr) *error = false;
 
         return 1.0*nominator/denominator;
