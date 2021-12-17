@@ -7,7 +7,7 @@
  *  The function returns the slope as float. Count is the amount of points in the serie.
  *  To give this value to the function you can use the following syntax: count = sizeof(yval)/sizeof(yval[0]).
  */
-float get_slope(int* yval, int count, bool* error) {
+float LineairRegression::get_slope(int* yval, int count, bool* error) {
     
     int max_value = *std::max_element(yval,yval + count);
     if(max_value*max_value > UINT32_MAX/count)
