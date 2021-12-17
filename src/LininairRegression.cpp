@@ -1,15 +1,16 @@
 #include "LineairRegression.h"
 #include <cstdint>
 #include <algorithm>
+#include <cstdio>
 
 /*
  *  Function that will do linear regression on a serie of data.
  *  The function returns the slope as float. Count is the amount of points in the serie.
  *  To give this value to the function you can use the following syntax: count = sizeof(yval)/sizeof(yval[0]).
  */
-float LineairRegression::get_slope(int* yval, int count, bool* error) {
+float LineairRegression::get_slope(uint8_t* yval, int count, bool* error) {
     
-    int max_value = *std::max_element(yval,yval + count);
+    uint8_t max_value = *std::max_element(yval,yval + count);
     if(max_value*max_value > UINT32_MAX/count)
     {
         // ERROR HANDLING
